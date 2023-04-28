@@ -7,7 +7,7 @@
     pincel.fillStyle = "lightgray";
     pincel.fillRect(0, 0, 600, 400);
 
-    function dibujarCirculo(300, 200, radio, color) {
+    function dibujarCirculo(x, y, radio, color) {
 
         pincel.fillStyle = color;
         pincel.beginPath();
@@ -15,7 +15,10 @@
         pincel.fill();
     }
 
-    dibujarCirculo(0,0);
-    dibujarCirculo(0,300);
+    for(var x =0; x < 600; x = x + 50){
+        dibujarCirculo(x,0,"red");
+        dibujarCirculo(x,50,"yellow");
+        dibujarCirculo(x,100,"green");
+        }
 
 </script>
