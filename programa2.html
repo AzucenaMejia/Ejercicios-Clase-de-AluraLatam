@@ -5,18 +5,18 @@
     function dibujarCuadrado(x,y,color){
         var pantalla = document.querySelector("canvas");
         var pincel = pantalla.getContext("2d");
-
-        pincel.fillStyle = color;
-        pincel.fillRect(x,y,50,50); 
-        pincel.strokeStyle = "black";
-        pincel.strokeRect(x,y,50,50);
+            pincel.fillStyle="blue";
+            pincel.beginPath();
+            pincel.arc(x,y,10,0,2*3.14);
+            pincel.fill();
+            console.log(x+","+y);
     }
 
 
-    for(var x =0; x < 600; x = x + 50){
     dibujarCuadrado(x,0,"red");
     dibujarCuadrado(x,50,"yellow");
     dibujarCuadrado(x,100,"green");
-    }
+    
 
+  }
 </script> 
